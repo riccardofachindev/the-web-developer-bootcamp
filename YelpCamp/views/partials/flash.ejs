@@ -1,0 +1,11 @@
+<% if(success && success.length) {%>
+    <h1><span class="badge text-bg-info">
+            <%= success %>
+        </span></h1>
+    <% } %>
+
+        <% if(error && error.length) {%>
+            <h1><span class="badge text-bg-danger">
+                    <%= error %>
+                </span></h1>
+            <% } %>
