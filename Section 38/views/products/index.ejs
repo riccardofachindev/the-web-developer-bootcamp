@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products index</title>
+</head>
+
+<body>
+    <h1>Index of products</h1>
+
+    <ul>
+        <% for (let prod of products) { %>
+            <li>
+                <a href="/products/<%= prod._id %>">
+                    <%= prod.name %>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+    <a href="/products/new">Add product</a>
+    <% if (category !=='All' ) { %>
+        <a href="/products">Go to All products</a>
+        <% } %>
+</body>
+
+</html>
